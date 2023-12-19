@@ -1,22 +1,30 @@
+// got this config from https://bun.sh/docs/typescript#suggested-compileroptions
 {
   "compilerOptions": {
+    // add Bun type definitions
+    "types": [
+      "bun-types" // add Bun global
+    ],
+
+    // enable latest features
     "lib": ["ESNext"],
     "module": "esnext",
     "target": "esnext",
+
+    // if TS 5.x
     "moduleResolution": "bundler",
-    "moduleDetection": "force",
-    "allowImportingTsExtensions": true,
     "noEmit": true,
-    "composite": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+
+    "allowJs": false, // To keep TS only
+
+    // Best practices
     "strict": true,
-    "downlevelIteration": true,
-    "skipLibCheck": true,
-    "jsx": "react-jsx",
-    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "allowJs": true,
-    "types": [
-      "bun-types" // add Bun global
-    ]
+    "skipLibCheck": true,
+    "composite": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
   }
 }
